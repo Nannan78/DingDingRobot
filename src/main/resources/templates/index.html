@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<title>Spica Admin</title>
+
+</head>
+
+<body>
+<div class="container-scroller d-flex">
+
+	<!--	<div class="container-fluid page-body-wrapper">
+            <p class="card-description">Test For Text</p>
+            <form class="forms-sample" th:action="@{/newkeyword/text}">
+
+
+
+                <div class="form-group">
+                    <input type="text" value="" class="form-control" name="msg"  placeholder="msg">
+                </div>
+
+
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+            <br>
+
+            <p class="card-description">Test For Text</p>
+            <form class="forms-sample" th:action="@{/keyword/text}">
+                <div class="form-group">
+                    <input type="text" value="text" class="form-control"  name="msgtype"  placeholder="msgtype">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="Text内容1" class="form-control"   name="text"  placeholder="text">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="17803691436,1233211231" class="form-control" name="atMobiless"  placeholder="messageUrl">
+                </div>
+                <div class="form-group">
+                    true<input type="radio" name="isAtAll"  value="true"/><br>
+                    false<input type="radio" name="isAtAll"  value="false"/><br>
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+            <br>
+            <p class="card-description">Test For linkWOPic</p>
+            <form class="forms-sample" th:action="@{/keyword/linkWOPic}">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="text" value="link" class="form-control"  name="msgtype" id="msgtype1" placeholder="msgtype">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" value="linkWOPic标题" class="form-control" name="title"   id="title1" placeholder="title">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="内容1" class="form-control"   name="text" id="text1" placeholder="text">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="www.baidu.com" class="form-control" name="messageUrl" id="messageUrl1" placeholder="messageUrl">
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+            <br>
+            <p class="card-description">Test For linkWithPic</p>
+            <form class="forms-sample" th:action="@{/keyword/linkWithPic}">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="text" value="link" class="form-control"  name="msgtype" id="msgtype2" placeholder="msgtype">
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <input type="text" value="linkWithPic标题" class="form-control" name="title"   id="title2" placeholder="title">
+                </div>
+                <div class="form-group">
+
+                    <input type="text" value="内容1" class="form-control"   name="text" id="text2" placeholder="text">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596021432801&di=82030caca7a7e809621fe63645f8e29f&imgtype=0&src=http%3A%2F%2Fimg8.zol.com.cn%2Fbbs%2Fupload%2F18816%2F18815745.jpg" class="form-control" name="picUrl" id="picUrl" placeholder="messageUrl">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="www.baidu.com" class="form-control" name="messageUrl" id="messageUrl2" placeholder="messageUrl">
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+            <br>
+            <p class="card-description">Test For markdown</p>
+            <form class="forms-sample" th:action="@{/keyword/markdown}">
+                <div class="form-group">
+                    <input type="text" value="markdown" class="form-control"  name="msgtype" placeholder="msgtype">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="# 标题markdown" class="form-control" name="title"    placeholder="title">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="#### 杭州天气 @150XXXXXXXX \n> 9度，西北风1级，空气良89，相对温度73%\n> ![screenshot](https://img.alicdn.com/tfs/TB1NwmBEL9TBuNjy1zbXXXpepXa-2400-1218.png)\n> ###### 10点20分发布 [天气](https://www.dingtalk.com) \n" class="form-control"   name="text"  placeholder="text">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="" class="form-control" name="atMobiless"  placeholder="atMobiless">
+                </div>
+                <div class="form-group">
+                    true<input type="radio" name="isAtAll"  value="true"/><br>
+                    false<input type="radio" name="isAtAll"  value="false"/><br>
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+            <br>
+            <p class="card-description">Test For wholeAction</p>
+            <form class="forms-sample" th:action="@{/keyword/wholeAction}">
+                <div class="form-group">
+                    <input type="text" value="actionCard" class="form-control"  name="msgtype" placeholder="msgtype">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="wholeAction标题" class="form-control" name="title"    placeholder="title">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="![screenshot](https://gw.alicdn.com/tfs/TB1ut3xxbsrBKNjSZFpXXcXhFXa-846-786.png)  # 内容1" class="form-control"   name="text"  placeholder="text">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="singleTitle" class="form-control" name="singleTitle"    placeholder="title">
+                </div>
+                <div class="form-group">
+                    <input type="text" value="www.baidu.com" class="form-control"   name="singleURL"  placeholder="text">
+                </div>
+                <div class="form-group">
+                    按钮竖直排列<input type="radio" name="btnOrientation"  value="0"/><br>
+                    按钮横向排列<input type="radio" name="btnOrientation"  value="1"/><br>
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+
+        </div>-->
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+	<!--test text-->
+	<script type="text/javascript">
+			$(function () {
+				var obj = JSON.stringify({
+					"msgtype": "text",
+					"text": {
+						"content": "我就是我, 是不一样的烟火@156xxxx8827"
+					},
+					"at": {
+						"atMobiles": [
+							"156xxxx8827",
+							"189xxxx8325"
+						],
+						"isAtAll": false
+					}
+				});
+				console.log(obj);
+				$.ajax({
+					url:'bykeyword',
+					type:'POST',
+					dataType: 'JSON',
+					contentType:'application/json;charset=UTF-8',
+					data: obj,
+					success:function(data){
+
+						console.log(data);
+
+					}
+				})
+			})
+		</script>
+<!--
+
+	&lt;!&ndash;test link&ndash;&gt;
+	<script type="text/javascript">
+			$(function () {
+				var obj = JSON.stringify({
+					"msgtype": "link",
+					"link": {
+						"text": "1这个即将发布的新版本，创始人xx称它为红树林。而在此之前，每当面临重大升级，产品经理们都会取一个应景的代号，这一次，为什么是红树林",
+						"title": "时代的火车向前开",
+						"picUrl": "",
+						"messageUrl": "https://www.dingtalk.com/s?__biz=MzA4NjMwMTA2Ng==&mid=2650316842&idx=1&sn=60da3ea2b29f1dcc43a7c8e4a7c97a16&scene=2&srcid=09189AnRJEdIiWVaKltFzNTw&from=timeline&isappinstalled=0&key=&ascene=2&uin=&devicetype=android-23&version=26031933&nettype=WIFI"
+					}
+				});
+				console.log(obj);
+				$.ajax({
+					url:'bykeyword',
+					type:'POST',
+					dataType: 'JSON',
+					contentType:'application/json;charset=UTF-8',
+					data: obj,
+					success:function(data){
+
+						console.log(data);
+
+					}
+				})
+			})
+		</script>
+
+	&lt;!&ndash;test markdown&ndash;&gt;
+	<script type="text/javascript">
+			$(function () {
+				var obj = JSON.stringify({
+					"msgtype": "markdown",
+					"markdown": {
+						"title":"杭州天气",
+						"text": "#### 杭州天气 @150XXXXXXXX \n> 9度，西北风1级，空气良89，相对温度73%\n> ![screenshot](https://img.alicdn.com/tfs/TB1NwmBEL9TBuNjy1zbXXXpepXa-2400-1218.png)\n> ###### 10点20分发布 [天气](https://www.dingtalk.com) \n"
+					},
+					"at": {
+						"atMobiles": [
+							"150XXXXXXXX"
+						],
+						"isAtAll": false
+					}
+				});
+				console.log(obj);
+				$.ajax({
+					url:'bykeyword',
+					type:'POST',
+					dataType: 'JSON',
+					contentType:'application/json;charset=UTF-8',
+					data: obj,
+					success:function(data){
+
+						console.log(data);
+
+					}
+				})
+			})
+		</script>
+
+	&lt;!&ndash;test AC&ndash;&gt;
+	<script type="text/javascript">
+			$(function () {
+				var obj = JSON.stringify({
+					"actionCard": {
+						"title": "乔布斯 20 年前想打造一间苹果咖啡厅，而它正是 Apple Store 的前身",
+						"text": "![screenshot](https://gw.alicdn.com/tfs/TB1ut3xxbsrBKNjSZFpXXcXhFXa-846-786.png)  ### 乔布斯 20 年前想打造的苹果咖啡厅  /n Apple Store 的设计正从原来满满的科技感走向生活化，而其生活化的走向其实可以追溯到 20 年前苹果一个建立咖啡馆的计划",
+						"btnOrientation": "0",
+						"singleTitle" : "阅读全文",
+						"singleURL" : "https://www.dingtalk.com/",
+						"btns": [
+							{
+								"title": "内容不错",
+								"actionURL": "https://www.dingtalk.com/"
+							},
+							{
+								"title": "不感兴趣",
+								"actionURL": "https://www.dingtalk.com/"
+							}
+						]
+					},
+					"msgtype": "actionCard"
+				});
+				console.log(obj);
+				$.ajax({
+					url:'bykeyword',
+					type:'POST',
+					dataType: 'JSON',
+					contentType:'application/json;charset=UTF-8',
+					data: obj,
+					success:function(data){
+
+						console.log(data);
+
+					}
+				})
+			})
+		</script>
+
+	&lt;!&ndash;test FC&ndash;&gt;
+	<script type="text/javascript">
+			$(function () {
+				var obj = JSON.stringify({
+					"feedCard": {
+						"links": [
+							{
+								"title": "1时代的火车向前开",
+								"messageURL": "https://www.dingtalk.com/s?__biz=MzA4NjMwMTA2Ng==&mid=2650316842&idx=1&sn=60da3ea2b29f1dcc43a7c8e4a7c97a16&scene=2&srcid=09189AnRJEdIiWVaKltFzNTw&from=timeline&isappinstalled=0&key=&ascene=2&uin=&devicetype=android-23&version=26031933&nettype=WIFI",
+								"picURL": "https://gw.alicdn.com/tfs/TB1ayl9mpYqK1RjSZLeXXbXppXa-170-62.png"
+							},
+							{
+								"title": "1时代的火车向前开2",
+								"messageURL": "https://www.dingtalk.com/s?__biz=MzA4NjMwMTA2Ng==&mid=2650316842&idx=1&sn=60da3ea2b29f1dcc43a7c8e4a7c97a16&scene=2&srcid=09189AnRJEdIiWVaKltFzNTw&from=timeline&isappinstalled=0&key=&ascene=2&uin=&devicetype=android-23&version=26031933&nettype=WIFI",
+								"picURL": "https://gw.alicdn.com/tfs/TB1ayl9mpYqK1RjSZLeXXbXppXa-170-62.png"
+							}
+						]
+					},
+					"msgtype": "feedCard"
+				});
+				console.log(obj);
+				$.ajax({
+					url:'bykeyword',
+					type:'POST',
+					dataType: 'JSON',
+					contentType:'application/json;charset=UTF-8',
+					data: obj,
+					success:function(data){
+
+						console.log(data);
+
+					}
+				})
+			})
+		</script>
+-->
+
+</div>
+
+
+</body>
+
+</html>
